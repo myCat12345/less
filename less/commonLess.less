@@ -1,0 +1,462 @@
+@charset 'urt-8';
+//初始化样式表
+.reset(){
+    html,body{width:100%;}
+    *{padding:0; margin: 0;}
+    li{list-style: none;}
+    img{border:0}
+    a{text-decoration: none;}
+}
+
+//元素居中设置  start
+.mo(){
+    margin: 0 auto;
+}
+
+//内边距设置 start
+.pdt(@pdvalue:0px){
+    padding-top:@pdvalue;
+}
+.pdr(@pdvalue:0px){
+    padding-right:@pdvalue;
+}
+.pdb(@pdvalue:0px){
+    padding-bottom:@pdvalue;
+}
+.pdl(@pdvalue:0px){
+    padding-left:@pdvalue;
+}
+.pd(x,@x:0px){
+    padding:0px @x;
+}
+.pd(y,@y:0px){
+    padding:@y 0px;
+}
+.pd(xy,@y:0px,@x:0px){
+    padding:@y @x;
+}
+.pd(q,@pdt:0px,@pdr:0px,@pdb:0px,@pdl:0px){
+    padding:@pdt @pdr @pdb @pdl;
+}
+
+//外边距设置 start
+.mat(@mavalue:0px){
+    margin-top:@mavalue;
+}
+.mar(@mavalue:0px){
+    margin-right:@mavalue;
+}
+.mab(@mavalue:0px){
+    margin-bottom:@mavalue;
+}
+.mal(@mavalue:0px){
+    margin-left:@mavalue;
+}
+.ma(x,@x:0px){
+    margin:0px @x;
+}
+.ma(y,@y:0px){
+    margin:@y 0px;
+}
+.ma(xy,@y:0px,@x:0px){
+    margin:@y @x;
+}
+.ma(q,@mat:0px,@mar:0px,@mab:0px,@mal:0px){
+    margin:@mat @mar @mab @mal;
+}
+
+//浮动设置 start
+.fll(){
+    float:left;    
+}
+.flr(){
+    float:right;
+}
+.clear(){
+    clear: both;
+}
+
+//定位设置  start
+.psa(){
+    position: absolute;
+}
+.psr(){
+    position: relative;
+}
+.psf(){
+    position: fixed;
+}
+
+//绝对定位设置  start
+.abs(lt,@left:left,@top:top){
+    position: absolute;
+    left:@left;
+    top:@top;
+}
+.abs(lb,@left:left,@bottom:bottom){
+    position: absolute;
+    left:@left;
+    bottom:@bottom;
+}
+.abs(rt,@right:right,@top:top){
+    position: absolute;
+    right:@right;
+    top:@top;
+}
+.abs(rb,@right:right,@bottom:bottom){
+    position: absolute;
+    right:@right;
+    bottom:@bottom;
+}
+
+//固定定位设置  start
+.fix(lt,@left:left,@top:top){
+    position: fixed;
+    left:@left;
+    top:@top;
+}
+.fix(lb,@left:left,@bottom:bottom){
+    position: fixed;
+    left:@left;
+    bottom:@bottom;
+}
+.fix(rt,@right:right,@top:top){
+    position: fixed;
+    right:@right;
+    top:@top;
+}
+.fix(rb,@right:right,@bottom:bottom){
+    position: fixed;
+    right:@right;
+    bottom:@bottom;
+}
+
+//相对定位设置  start
+.rel(lt,@left:left,@top:top){
+    position: relative;
+    left:@left;
+    top:@top;
+}
+.rel(lb,@left:left,@bottom:bottom){
+    position: relative;
+    left:@left;
+    bottom:@bottom;
+}
+.rel(rt,@right:right,@top:top){
+    position: relative;
+    right:@right;
+    top:@top;
+}
+.rel(rb,@right:right,@bottom:bottom){
+    position: relative;
+    right:@right;
+    bottom:@bottom;
+}
+
+//显示和隐藏设置 start
+.hide(){
+    display: none;
+}
+.show(){
+    display: block;
+}
+
+//块元素和行内元素设置  start
+.block(b){
+    display: block;
+}
+.block(ib){
+    display: inline-block;
+}
+.block(i){
+    display: inline;
+}
+
+//宽度设置  start
+.w(@w:0px){
+    width:@w;
+}
+
+//高度设置  start
+.h(@h:0px){
+    height:@h;
+}
+
+//边框设置 start
+.bdt(@w:1px,@style:solid,@col:red){
+    border-top:@w @style @col;
+}
+.bdr(@w:1px,@style:solid,@col:red){
+    border-right:@w @style @col;
+}
+.bdb(@w:1px,@style:solid,@col:red){
+    border-bottom:@w @style @col;
+}
+.bdl(@w:1px,@style:solid,@col:red){
+    border-left:@w @style @col;
+}
+.bd(q,@w:1px,@style:solid,@col:red){
+    border:@w @style @col;
+}
+
+//背景颜色 start
+.bg(@bacol:#000){
+    background-color: @bacol;
+}
+
+//颜色设置  start
+.col(@clo:#000){
+    color:@clo;
+}
+
+//字体设置 start
+.fns(@fns:14px){
+    font-size:@fns;
+}
+.fnf(@fnf:'微软雅黑'){
+    font-family: @fnf;
+}
+.fnw(@fnw:'normal'){
+    font-weight: @fnw;
+}
+.fnc(@fnc:#ccc){
+    color:@fnc;
+}
+.fnstyle(@fnstyle:normal){
+    font-style: @fnstyle;
+}
+.fn(q,@fnf:'微软雅黑',@fns:0px,@fnc:#666,@fnw:normal){   
+    font-family: @fnf;
+    font-size:@fns;
+    color:@fnc;
+    font-weight: @fnw;
+}
+
+//文本对齐设置  start
+.txc(){
+    text-align: center;
+}
+.txl(){
+    text-align: left;    
+}
+.txr(){
+    text-align: right;
+}
+
+//行高设置 start
+.line(@line:20px){
+    line-height: @line;
+}
+
+//文本溢出设置    start
+.txovere(){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.txoverh(){
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+//溢出处理设置 starssssst
+.overa(){
+    overflow: auto;
+}
+.overa(x){
+    overflow-x: auto;
+}
+.overa(y){
+    overflow-y: auto;
+}
+.overs(x){
+    overflow-x: scroll;
+}
+.overs(y){
+    overflow-y: scroll;
+}
+.overh(x){
+    overflow-x: hidden;
+}
+.overh(y){
+    overflow-y: hidden;
+}
+
+//文本缩进设置 start
+.txin(@indentpx:2em){
+    text-indent: @indentpx;
+}
+
+//透明度设置 start
+.opc(@bac:#000,@opcvalue:60){
+    background-color: @bac;
+    opacity: @opcvalue/100;
+    -moz-opacity:@opcvalue/100;
+}
+.opcie(@bac:#000,@opcvalue:60){
+    background-color: @bac;
+    filter: alpha(opacity=@opcvalue);
+}
+
+//背景图片重复设置 start
+.rep(n){
+    background-repeat: no-repeat;
+}
+.rep(x){
+    background-repeat: repeat-x;
+}
+.rep(y){
+    background-repeat: repeat-y;
+}
+
+//背景图片大小设置 start
+.bgsize(con){
+    background-size: contain;
+}
+.bgsize(cov){
+    background-size: cover;
+}
+.bgsize(@value:100%){
+    background-size: 100%;
+}
+.bgsize(q,@w:100%,@h:100%){
+    background-size: @w @h;
+}
+
+//背景图片的位置 start
+.bgpos(@left:left,@top:top){
+    background-position: @left @top;
+}
+
+//圆角设置 start
+.bd-rad(q,@radius:4px){
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+.bd-rad(lt,@radius:4px){
+    -webkit-border-top-left-radius: @radius;
+    -moz-border-top-left-radius: @radius;
+    border-top-left-radius: @radius;
+}
+.bd-rad(rt,@radius:4px){
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-top-right-radius: @radius;
+    border-top-right-radius: @radius;
+}
+.bd-rad(lb,@radius:4px){
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-bottom-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+.bd-rad(rb,@radius:4px){
+    -webkit-border-bottom-right-radius: @radius;
+    -moz-border-bottom-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+}
+
+
+//css3绘制三角形start
+.triangle(top,@w:5px,@col:#ccc){
+    border-width: @w;
+    border-color:transparent transparent @col transparent;
+    border-style: dashed dashed solid dashed;
+}
+.triangle(right,@w:5px,@col:#ccc){
+    border-width: @w;
+    border-color:transparent transparent transparent @col ;
+    border-style: dashed dashed dashed solid;
+}
+.triangle(bottom,@w:5px,@col:#ccc){
+    border-width: @w;
+    border-color: @col transparent transparent transparent;
+    border-style: solid  dashed dashed dashed;
+}
+.triangle(left,@w:5px,@col:#ccc){
+    border-width: @w;
+    border-color:transparent @col transparent transparent;
+    border-style: dashed solid dashed dashed;
+}
+.triangle(@_,@w:5px,@col:#ccc){
+    width:0;
+    height:0;
+    overflow: hidden;
+}
+
+//旋转设置 start
+ .rotate(x,@deg:90deg,@time:0.5s){
+    transform: rotateX(@deg);
+    -webkit-transform: rotateX(@deg);
+    -moz-transform: rotateX(@deg);
+    -o-transform: rotateX(@deg);
+    -ms-transform: rotateX(@deg);    
+    transition: @time all;
+    -webkit-transition: @time all;
+    -moz-transition: @time all;
+    -o-transition: @time all;
+    -ms-transition: @time all;
+ } 
+ .rotate(y,@deg:90deg,@time:0.5s){
+    transform: rotateY(@deg);
+    -webkit-transform: rotateY(@deg);
+    -moz-transform: rotateY(@deg);
+    -o-transform: rotateY(@deg);
+    -ms-transform: rotateY(@deg);    
+    transition: @time all;
+    -webkit-transition: @time all;
+    -moz-transition: @time all;
+    -o-transition: @time all;
+    -ms-transition: @time all;
+ }  
+ .rotate(z,@deg:90deg,@time:0.5s){
+    transform: rotateZ(@deg);
+    -webkit-transform: rotateZ(@deg);
+    -moz-transform: rotateZ(@deg);
+    -o-transform: rotateZ(@deg);
+    -ms-transform: rotateZ(@deg);    
+    transition: @time all;
+    -webkit-transition: @time all;
+    -moz-transition: @time all;
+    -o-transition: @time all;
+    -ms-transition: @time all;
+ } 
+
+ //位移设置 start
+ .translate(x,@value:2px,@time:0.5s){
+    transform: translateX(@value);
+    -webkit-transform: translateX(@value);
+    -moz-transform: translateX(@value);
+    -o-transform: translateX(@value);
+    -ms-transform: translateX(@value);
+    transition:@time all;
+    -webkit-transition:@time all;
+    -moz-transition:@time all;
+    -o-transition:@time all;
+    -ms-transition:@time all;
+ }
+ .translate(y,@value:2px,@time:0.5s){
+    transform: translateY(@value);
+    -webkit-transform: translateY(@value);
+    -moz-transform: translateY(@value);
+    -o-transform: translateY(@value);
+    -ms-transform: translateY(@value);
+    transition:@time all;
+    -webkit-transition:@time all;
+    -moz-transition:@time all;
+    -o-transition:@time all;
+    -ms-transition:@time all;
+ }
+
+//放大设置 start
+.scale(@scale:1.2,@time:0.5s){
+    transform: scale(@scale);
+    -webkit-transform: scale(@scale);
+    -moz-transform: scale(@scale);
+    -o-transform: scale(@scale);
+    -ms-transform: scale(@scale);
+    transition:@time all;
+    -webkit-transition:@time all;
+    -moz-transition:@time all;
+    -o-transition:@time all;
+    -ms-transition:@time all;
+}
